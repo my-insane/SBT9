@@ -15,7 +15,7 @@ public class Person {
             if(person.spouse != null){
                 person.divorce();
             }
-            if (this.spouse == null | person == null){
+            if (this.spouse == null | person.spouse == null){
                 this.spouse = person;
                 person.spouse = this;
                 return true;

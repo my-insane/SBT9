@@ -1,14 +1,13 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
-class Z2056 {
+public class Z2056 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str = null;
+        String str;
         TreeMap<String, Integer> fr = new TreeMap<>();
         int max = 1;
 
@@ -34,13 +33,9 @@ class Z2056 {
             }
         }
 
-        Iterator<String> it = fr.keySet().iterator();
-
-        while (it.hasNext()) {
-            String key = it.next();
+        for (String key : fr.keySet()) {
             if (fr.get(key) == max)
                 System.out.println(key);
-            ;
         }
 
     }
